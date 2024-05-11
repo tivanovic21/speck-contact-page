@@ -45,10 +45,10 @@ const MainContent = () => {
         let filesBase64 = await Promise.all(files.map(async file => {
             return new Promise((res, rej) => {
                 const reader = new FileReader();
-                reader.onload = () => res(reader.result);
+                reader.onload = () => res({content: reader.result, name: file.name});
                 reader.onerror = err => rej(err);
                 reader.readAsDataURL(file);
-            })
+            });
         }))
 
         let data = {
@@ -63,8 +63,6 @@ const MainContent = () => {
             scope: scopeRef.current?.value,
             files: filesBase64
         };
-
-        console.log("data: ", data);
 
         await fetch("/api", {
             method: "POST",
