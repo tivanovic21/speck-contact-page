@@ -1,0 +1,223 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2758
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14200\viewh14880\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs36 \cf0 testiranje
+\f1\b0  - proces utvr\uc0\u273 ivanja da softver izvr\'9aava zadane zahtjeve -> dimami\u269 ka provjera o\u269 ekivanog pona\'9aanja na kona\u269 nom skupu prikladno odabranih testova iz beskona\u269 ne domene\
+\
+
+\f0\b za\'9ato testirati 
+\f1\b0 -> u\'9ateda novca, sigurnost, kvaliteta proizvoda, zadovoljstvo kupaca, pobolj\'9aanje procesa razvoja, lako dodavanje novih zna\uc0\u269 ajki, utvr\u273 ivanje performansi softvera\
+\
+
+\f0\b validacija
+\f1\b0  - radimo li pravi proizvod\
+
+\f0\b verifikacija
+\f1\b0  - radi li proizvod kako treba\
+\
+
+\f0\b SQM
+\f1\b0  - planiranje kvalitete softvera, osiguranje kvalitete softvera (sqa), kontrola kvalitete softvera (sqc), poboljsanje procesa softvera (spi)\
+QA -> QC -> Testing\
+\
+
+\f0\b PDCA
+\f1\b0  - plan, do, check, act\
+\
+
+\f0\b stati\uc0\u269 ke
+\f1\b0  
+\f0\b tehnike
+\f1\b0  - (peer)review, analiza, protok podataka -> pregled dokumenata i koda\
+
+\f0\b dinami\uc0\u269 ke
+\f1\b0  
+\f0\b tehnike
+\f1\b0  - izvr\'9aavanje softverskog koda, FZ\
+\
+
+\f0\b QM
+\f1\b0  - samo softverski proizvod -> osigurava osnovnu specifikaciju zahtjeva kvalitete i procjenjivanu kvalitetu\
+
+\f0\b kvaliteta u kori\'9atenju
+\f1\b0  -> karakterizira utjecaj softvera na dionike, odre\uc0\u273 ena kvalitetom softvera, hardvera, OS-a\
+ISO/IEC 9126, ISO/IEC 25000\
+
+\f0\b ISO/IEC 25010 
+\f1\b0 -> cjeloviti pregled karakteristika, podkarakteristika i mjerljivih atributa -> ovisi o vrsti softvera\
+	-> identificiranje zahtjeva, validacija i potvrda kompleksnosti zahtjeva, identifikacija ciljeva razvoja i testiranja\
+
+\f0\b procjena
+\f1\b0  - sustavno odre\uc0\u273 ivanje mjere u kojoj entitet ispunjava specificirane kriterije\
+\
+
+\f0\b svrha testiranja prema ISO/IEC/IEEE 29119-1:2022\
+
+\f1\b0 - otkrivanje nedostataka, prikupljanje informacija o jedinici testiranja, stvaranje povjerenja i dono\'9aenje odluka\
+\
+-> generalni ciljevi -> procjena radnih proizvoda, provjera ispunjenosti zahtjeva, potvrda dovr\uc0\u273 enosti, izgradnja povjerenja, spre\u269 avanje defekata\
+
+\f0\b software testing life cycle 
+\f1\b0 -> requirement review -> test initiation -> test design -> test execution -> deficit managment -> test closure\
+\
+
+\f0\b testiranje vs formalna verifikacija 
+\f1\b0 -> brzo vs nezgrapno -> provjera odre\uc0\u273 enih ulaza vs provjera svih mogu\u263 ih ulaza\
+
+\f0\b testiranje vs debuggiranje
+\f1\b0  -> manualno vs automatizirano -> otkrivanje u\uc0\u269 inka gre\'9ake vs otkrivanje gre\'9aki u kodu\
+\
+
+\f0\b ISTQB Glossary\
+
+\f1\b0 Error = ljudsko djelovanje koje proizvodi neispravan rezultat\
+Defect (fault) = odstupanje od zahtjeva\
+Bug = rezultat gre\'9ake kodiranja ili gre\'9ake u programu\
+Zatajenje (Failiure) = doga\uc0\u273 aj kada sustav ili komponenta ne obavlja tra\'9eenu funkciju unutar navedenih ograni\u269 enja\
+\
+
+\f0\b Bug tracking tools 
+\f1\b0 - Jira, Bugzilla, DebugMe, Mantis, Bugherd, ReQtest, FogBugz\
+\
+
+\f0\b uzroci gre\'9aaka
+\f1\b0  - neadekvatni zahtjevi, pogre\'9ake u programiranju, komunikacijski jaz, vremenski pritisci, neprikladno okru\'9eenje\
+\
+
+\f0\b Root Cause Analysis (RCA, analiza temeljnog uzroka) 
+\f1\b0 - \'8ato? Kada? Za\'9ato? Kako?\
+\
+
+\f0\b \'8eivotni ciklus buga
+\f1\b0  - novi, dodijeljen, otvoren, popravljen, ponovno testiran, ponovno otvoren, odgo\uc0\u273 en, odbijen, duplikat, zatvoren, nije bug / pobolj\'9aanje\
+\
+
+\f0\b Principi testiranja
+\f1\b0 \
+testiranje pokazuje prisutnost nedostataka, ne odsutnost\
+iscrpno testiranje je nemogu\uc0\u263 e\
+rano testiranje \'9atedi novac\
+nedostatci se grupiraju zajedno (clusteri)\
+pazite se paradoksa pesticida\
+testiranje ovisi o kontekstu\
+odsutnost pogre\'9aaka je zabluda\
+\
+
+\f0\b Dobri principi\
+
+\f1\b0 definicija o\uc0\u269 ekivanog izlaza (rezultata)\
+izbjegavanje testiranja vlastitih programa\
+organizacije ne bi trebale testirati vlastite programe\
+temeljito provjeriti rezultate testiranja\
+testni slu\uc0\u269 ajevi i za ono \'9ato softver ne bi trebao raditi \
+izbjegavanje jednokratnih testnih slu\uc0\u269 ajeva\
+ne planirati testove pod pretpostavkom da ne\uc0\u263 e biti gre\'9ake\
+vjerojatnost postojanja gre\'9ake je proporcionalna broju ve\uc0\u263  prona\u273 enih gre\'9aaka\
+\
+
+\f0\b ISO/IEC/IEEE 29119-2:2021\
+
+\f1\b0 aktivnosti testiranja koje se mogu izvesti tijekom \'9eivotnog ciklusa softverskog sustava:\
+
+\f0\b Dynamic testing process
+\f1\b0  - definiranje generi\uc0\u269 kih procesa za provo\u273 enje dinami\u269 kog testiranja na odre\u273 enoj razini (unit, integration, system, acceptance) ili vrsti (performansi, sigurnosti, funkcionalnosti)
+\f0\b \
+Test management processes 
+\f1\b0 - definiranje proces koji pokrivaju upravljanje testiranjem za cijeli projekt ili odre\uc0\u273 enu razinu (system, unit, \'85) ili vrstu (performansi, sigurnosti, \'85)
+\f0\b \
+Organisational test processes
+\f1\b0  - definirati procese za stvaranje i odr\'9eavanje organizacijskih specifikacija testiranja kao \'9ato su politike, prakse, procesi, procedure, imovina\
+\
+
+\f0\b ISO/IEC/IEEE 29119-3:2021\
+Politika testiranja
+\f1\b0  - definira ciljeve i na\uc0\u269 ela testiranja softvera -> opisuje \'9ato se treba posti\u263 i, ne kako\
+
+\f0\b Organizacijske prakse testiranja 
+\f1\b0 - testna dokumentacija koja daje smjernice kako se testiranje provodi\
+\
+
+\f0\b Plan testiranja
+\f1\b0  - stavka testne dokumentacije koja se koristi za planiranje testa i upravljanje testom -> primjenjivo na vi\'9ae projekata\
+
+\f0\b Izvje\'9a\uc0\u263 e o statusu testiranja 
+\f1\b0 - informacije o statusu testiranja koje se provodi (usmeno, sastanak, pismeno)\
+
+\f0\b Izvje\'9a\uc0\u263 e o zavr\'9aetku testiranja 
+\f1\b0 - sa\'9eetak obavljenog testiranja\
+\
+
+\f0\b Specifikacija modela testiranja
+\f1\b0  - prikaz aspekata testne stavke fokusiran na atribute koji definiraju potrebnu pokrivenost testom\
+
+\f0\b Specifikacija testnih slu\uc0\u269 ajeva
+\f1\b0  - identificira stavke testne pokrivenosti i odgovaraju\uc0\u263 e testne slu\u269 ajeve izvedene primjenom jedne ili vi\'9ae testnih tehnika na model testiranja\
+
+\f0\b Specifikacija postupaka testiranja 
+\f1\b0 - opisuje testne slu\uc0\u269 ajeve u redoslijedu izvr\'9aavanja zajedno sa svim povezanim radnjama koje mogu biti potrebne za postavljanje potrebnih preduvjeta\
+
+\f0\b Zahtjevi za testne podatke
+\f1\b0  - opisuju testne podatke potrebne za izvo\uc0\u273 enje postupaka\
+
+\f0\b Zahtjevi testne okoline 
+\f1\b0 - opisuju svojstva testne okoline potrebne za izvo\uc0\u273 enje testnih procedura\
+
+\f0\b Izvje\'9a\uc0\u263 e o spremnosti testnih podataka
+\f1\b0  - opisuje ispunjenje svakog od zahtjeva testnih podataka\
+
+\f0\b Izvje\'9a\uc0\u263 e o spremnosti testne okoline
+\f1\b0  - opisuje ispunjenje svakog od zahtjeva testne okoline\
+\
+
+\f0\b Stvari rezultati i rezultati testiranja
+\f1\b0  - pohranjuju se unutar kopije specifikacije testnog su\uc0\u269 elja -> 
+\f0\b kombinirani dokumenti
+\f1\b0 \
+
+\f0\b Dnevnik (log) izvr\'9aenja testiranja
+\f1\b0  - bilje\'9ei pojedinosti o izvr\'9aenju 1 ili vi\'9ae testnih procedura kao niza doga\uc0\u273 aja\
+
+\f0\b Izvje\'9a\uc0\u263 e o incidentima
+\f1\b0  - opisuje incidente -> incident je bilo koji problem koji se primjeti prilikom testiranja\
+\
+\
+
+\f0\b GHERKIN primjer\
+\
+Feature: 
+\f1\b0 User login\
+\
+
+\f0\b Background: 
+\f1\b0 \ul Given\ulnone  user is on the login screen\
+\
+
+\f0\b Scenario:
+\f1\b0  Valid credentials\
+	\ul When\ulnone  user enters credentials <username> and <password>\
+	\ul And\ulnone  click 
+\f0\b login
+\f1\b0  button\
+	\ul Then\ulnone  the user should see the pop up window that says <success>\
+\
+	
+\f0\b Examples
+\f1\b0 :\
+	| username | password | success |\
+	| admin       | admin       | Successfully logged in! | \
+\
+
+\f0\b Behavior driven development (Cucumber = SpecFlow testni okvir)\
+Test runners (xunit, NUnit, Junit, PyTest)\
+Automation framework (Selenium, Playwright)\
+\
+OwaspZAP, Burp Suite, Application inspector\
+OpenVAS, Nessus\
+SonarQube, Fortify\
+Metasploit\
+\
+WinAppDriver (specflow)}

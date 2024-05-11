@@ -8,7 +8,34 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@media only screen and (max-width: 600px) {
+  .form-container {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .info-text {
+    font-size: 24px;
+  }
+}
+
+
+@media (prefers-color-scheme: light) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -16,18 +43,24 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+body {  
+  background-color: #fff;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@font-face {
+  font-family: 'Heywow';
+  src: 
+    url('../../public/fonts/heywow/HeyWowBold.ttf') format('truetype'),
+    url('../../public/fonts/heywow/HeyWowBook.ttf') format('truetype'),
+    url('../../public/fonts/heywow/HeyWowLight.ttf') format('truetype'),
+    url('../../public/fonts/heywow/HeyWowMedium.ttf') format('truetype'),
+    url('../../public/fonts/heywow/HeyWowRegular.ttf') format('truetype'),
+    url('../../public/fonts/heywow/HeyWowSemiBold.ttf') format('truetype'),
+    url('../../public/fonts/heywow/HeyWowExtraBold.ttf') format('truetype');
 }
