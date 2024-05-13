@@ -1,8 +1,14 @@
 "use client";
-import React, {useState, useRef} from "react";
+import React, {useState, useRef, useEffect} from "react";
 import "./globals.css";
 
 const MainContent = () => {
+    const [windowWidth, setWindowWidth] = useState<number>(0);
+
+    useEffect(() => {
+        setWindowWidth(window.innerWidth);
+    }, []);
+
     const fileInput = useRef<HTMLInputElement>(null);
     const [files, setFiles] = useState<File[]>([]);
     const [selectedBudget, setSelectedBudget] = useState<string | null>(null);
@@ -84,7 +90,7 @@ const MainContent = () => {
 
     return (
         <main className="p-24 min-h-screen">
-            <div className="flex flex-row flex-wrap">
+            <div className={`flex flex-row flex-wrap ${windowWidth <= 1500 ? 'md:mb-44' : 'md:mb-16'}`}>
                 <div style={{fontSize: '180px', top: 100, left: 75, overflowWrap: 'anywhere', opacity: '0.03'}} className=" text-black font-heywow font-bold absolute pointer-events-none">
                     <p>Let's Collaborate</p>
                 </div>
@@ -92,16 +98,16 @@ const MainContent = () => {
                     Let's Collaborate<span className="text-speck-red font-heywow font-bold md:text-7xl text-5xl">.</span>
                 </h1> 
             </div>
-            <div className="flex justify-center items-center md:h-screen md:pt-44 md:pb-16 py-8">
+            <div className="flex justify-center items-center md:h-screen">
                 <div className="font-poppins text-base font-normal">
                     <form className="grid gap-y-10 grid-cols-2 gap-x-10 w-full" ref={formRef} onSubmit={handleSubmit}>
-                        <input ref={firstNameRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva bg-transparent" placeholder="First Name *" required />
-                        <input ref={lastNameRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva bg-transparent" placeholder="Last Name *" required />
-                        <input ref={emailRef} type="email" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva bg-transparent" placeholder="Email Address *" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
-                        <input ref={phoneNumberRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva bg-transparent" placeholder="Phone Number *" required />
-                        <input ref={companyRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva bg-transparent" placeholder="Company *" required />
+                        <input ref={firstNameRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent" placeholder="First Name *" required />
+                        <input ref={lastNameRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent" placeholder="Last Name *" required />
+                        <input ref={emailRef} type="email" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent" placeholder="Email Address *" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+                        <input ref={phoneNumberRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent" placeholder="Phone Number *" required />
+                        <input ref={companyRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent" placeholder="Company *" required />
 
-                        <select ref={howDidYouHearAboutUsRef} defaultValue="" className="mt-5 text-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva bg-transparent" required>
+                        <select ref={howDidYouHearAboutUsRef} defaultValue="" className="mt-5 text-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent" required>
                             <option value="" disabled className="text-speck-ligt-siva">How did you hear about us?</option>
                             <option value="option1" className="hover:text-speck-red">Social media (Facebook, Instagram, LinkedIn)</option>
                             <option value="option2" className="hover:text-speck-red">Word of mouth</option>
@@ -109,7 +115,7 @@ const MainContent = () => {
                             <option value="option4" className="hover:text-speck-red">Other</option>
                         </select>
 
-                        <select ref={challengeRef} defaultValue="" className="mt-5 text-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva bg-transparent col-span-2" required>
+                        <select ref={challengeRef} defaultValue="" className="mt-5 text-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black   bg-transparent col-span-2" required>
                             <option value="" disabled className="text-speck-light-siva">What challenge are you trying to solve?</option>
                             <option value="challenge1" className="hover:text-speck-red">Creating a new digital product</option>
                             <option value="challenge2" className="hover:text-speck-red">Scaling my business</option>
@@ -130,7 +136,7 @@ const MainContent = () => {
                             </div>
                         </div>
 
-                        <textarea ref={scopeRef} placeholder="Tell us more about your scope*" className="col-span-2 placeholder-speck-ligt-siva w-100 mt-10 h-8 border-b-2 border-dotted border-speck-ligt-siva bg-transparent resize-none" required />
+                        <textarea ref={scopeRef} placeholder="Tell us more about your scope*" className="col-span-2 placeholder-speck-ligt-siva w-100 mt-10 h-8 border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent resize-none" required />
 
 
                         <div id="fileInput" className="mt-5 flex justify-center col-span-2 p-10 text-center border-2 border-dotted border-speck-ligt-siva rounded-3xl" onClick={handleFileInputClick}>

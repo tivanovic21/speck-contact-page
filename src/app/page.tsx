@@ -6,12 +6,14 @@ import './globals.css';
 
 export default function Page() {
   return (
-    <div className=' overflow-x-hidden'>
+    <div className='overflow-x-hidden'>
       <NavBar />
-      <main className='min-w-fit'>
+      <main>
         <MainContent />
       </main>
-      <Footer />
+      <div className='md:mt-44 mt-10'>
+        <Footer/>
+      </div>
     </div>
   );
 }
