@@ -12,6 +12,7 @@ const MainContent = () => {
     const fileInput = useRef<HTMLInputElement>(null);
     const [files, setFiles] = useState<File[]>([]);
     const [selectedBudget, setSelectedBudget] = useState<string | null>(null);
+    const [selectedChallenge, setSelectedChallenge] = useState<string | null>(null);
 
     const handleFileInputClick = () => {
         if(fileInput.current){
@@ -90,15 +91,16 @@ const MainContent = () => {
 
     return (
         <main className="p-24 min-h-screen">
+            <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
             <div className={`flex flex-row flex-wrap ${windowWidth <= 1500 ? 'md:mb-44' : 'md:mb-16'}`}>
-                <div style={{fontSize: '180px', top: 100, left: 75, overflowWrap: 'anywhere', opacity: '0.03'}} className=" text-black font-heywow font-bold absolute pointer-events-none">
+                <div style={{fontSize: '180px', top: 100, left: 40, overflowWrap: 'anywhere', opacity: '0.03'}} className=" text-black font-heywow font-bold absolute pointer-events-none">
                     <p>Let's Collaborate</p>
                 </div>
-                <h1 className="text black font-heywow font-bold md:text-7xl text-5xl break-words">
-                    Let's Collaborate<span className="text-speck-red font-heywow font-bold md:text-7xl text-5xl">.</span>
+                <h1 className="text black font-heywow font-bold md:text-7xl text-5xl break-words pointer-events-none">
+                    Let's Collaborate<span className="text-speck-red font-heywow font-bold md:text-7xl text-5xl pointer-events-none">.</span>
                 </h1> 
             </div>
-            <div className="flex justify-center items-center md:h-screen">
+            <div className="flex justify-center items-center md:h-screen z-10">
                 <div className="font-poppins text-base font-normal">
                     <form className="grid gap-y-10 grid-cols-2 gap-x-10 w-full" ref={formRef} onSubmit={handleSubmit}>
                         <input ref={firstNameRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent" placeholder="First Name *" required />
@@ -107,7 +109,7 @@ const MainContent = () => {
                         <input ref={phoneNumberRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent" placeholder="Phone Number *" required />
                         <input ref={companyRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent" placeholder="Company *" required />
 
-                        <select ref={howDidYouHearAboutUsRef} defaultValue="" className="mt-5 text-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent" required>
+                        <select ref={howDidYouHearAboutUsRef} defaultValue="" className={`${selectedBudget == null ? 'text-speck-ligt-siva' : 'text-black'} mt-5 border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent`} onChange={(event) => setSelectedBudget(event.target.value)} required>
                             <option value="" disabled className="text-speck-ligt-siva">How did you hear about us?</option>
                             <option value="option1" className="hover:text-speck-red">Social media (Facebook, Instagram, LinkedIn)</option>
                             <option value="option2" className="hover:text-speck-red">Word of mouth</option>
@@ -115,7 +117,7 @@ const MainContent = () => {
                             <option value="option4" className="hover:text-speck-red">Other</option>
                         </select>
 
-                        <select ref={challengeRef} defaultValue="" className="mt-5 text-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black   bg-transparent col-span-2" required>
+                        <select ref={challengeRef} defaultValue="" className={`${selectedChallenge == null ? 'text-speck-ligt-siva' : 'text-black'} mt-5 border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent col-span-2`} onChange={(event) => setSelectedChallenge(event.target.value)} required>
                             <option value="" disabled className="text-speck-light-siva">What challenge are you trying to solve?</option>
                             <option value="challenge1" className="hover:text-speck-red">Creating a new digital product</option>
                             <option value="challenge2" className="hover:text-speck-red">Scaling my business</option>
