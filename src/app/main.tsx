@@ -83,92 +83,94 @@ const MainContent = () => {
     };
 
     return (
-        <main>
-            <div>
-                <div style={{ color: "black", fontSize: "180px", fontFamily:"Heywow", position: "absolute", top: "100px", left: "75px", opacity: 0.03, pointerEvents: 'none' }}>
-                    Let's Collaborate
+        <main className="p-24 min-h-screen">
+            <div className="flex flex-row flex-wrap">
+                <div style={{fontSize: '180px', top: 100, left: 75, overflowWrap: 'anywhere', opacity: '0.03'}} className=" text-black font-heywow font-bold absolute pointer-events-none">
+                    <p>Let's Collaborate</p>
                 </div>
-                <h1 style={{ color: "black", fontFamily: 'HeyWow', fontSize: '66px' }}>
-                    Let's Collaborate<span style={{ color: "red", fontFamily: "Heywow", fontSize: '66px' }}>.</span>
-                </h1>
+                <h1 className="text black font-heywow font-bold md:text-7xl text-5xl break-words">
+                    Let's Collaborate<span className="text-speck-red font-heywow font-bold md:text-7xl text-5xl">.</span>
+                </h1> 
             </div>
-            <div className="form-container flex justify-center" style={{fontWeight: 'normal', fontSize: '18px'}}>
-                <form className="grid grid-cols-2 gap-10" ref={formRef} onSubmit={handleSubmit}>
-                    <input ref={firstNameRef} type="text" className="mt-5" placeholder="First Name *" style={{border: 'none', borderBottom: '1px dotted black', background: 'transparent'}} required />
-                    <input ref={lastNameRef} type="text" className="mt-5" placeholder="Last Name *" style={{border: 'none', borderBottom: '1px dotted black', background: 'transparent'}} required />
-                    <input ref={emailRef} type="email" className="mt-5" placeholder="Email Address *" style={{border: 'none', borderBottom: '1px dotted black', background: 'transparent'}} required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
-                    <input ref={phoneNumberRef} type="text" className="mt-5" placeholder="Phone Number *" style={{border: 'none', borderBottom: '1px dotted black', background: 'transparent'}} required />
-                    <input ref={companyRef} type="text" className="mt-5" placeholder="Company *" style={{border: 'none', borderBottom: '1px dotted black', background: 'transparent'}} required />
+            <div className="flex justify-center items-center md:h-screen md:pt-44 md:pb-16 py-8">
+                <div className="font-poppins text-base font-normal">
+                    <form className="grid gap-y-10 grid-cols-2 gap-x-10 w-full" ref={formRef} onSubmit={handleSubmit}>
+                        <input ref={firstNameRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva bg-transparent" placeholder="First Name *" required />
+                        <input ref={lastNameRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva bg-transparent" placeholder="Last Name *" required />
+                        <input ref={emailRef} type="email" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva bg-transparent" placeholder="Email Address *" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+                        <input ref={phoneNumberRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva bg-transparent" placeholder="Phone Number *" required />
+                        <input ref={companyRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva bg-transparent" placeholder="Company *" required />
 
-                    <select ref={howDidYouHearAboutUsRef} className="mt-5" style={{border: 'none', borderBottom: '1px dotted black', background: 'transparent'}} required>
-                        <option value="">How did you hear about us?</option>
-                        <option value="option1">Social media (Facebook, Instagram, LinkedIn)</option>
-                        <option value="option2">Word of mouth</option>
-                        <option value="option3">Google</option>
-                        <option value="option4">Other</option>
-                    </select>
+                        <select ref={howDidYouHearAboutUsRef} defaultValue="" className="mt-5 text-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva bg-transparent" required>
+                            <option value="" disabled className="text-speck-ligt-siva">How did you hear about us?</option>
+                            <option value="option1" className="hover:text-speck-red">Social media (Facebook, Instagram, LinkedIn)</option>
+                            <option value="option2" className="hover:text-speck-red">Word of mouth</option>
+                            <option value="option3" className="hover:text-speck-red">Google</option>
+                            <option value="option4" className="hover:text-speck-red">Other</option>
+                        </select>
 
-                    <select ref={challengeRef} className="mt-5 col-span-2 w-100" style={{border: 'none', borderBottom: '1px dotted black', background: 'transparent' }} required>
-                        <option value="">What challenge are you trying to solve?</option>
-                        <option value="challenge1">Creating a new digital product</option>
-                        <option value="challenge2">Scaling my business</option>
-                        <option value="challenge3">Stepping into digital transformation</option>
-                        <option value="challenge4">Auditing and optimizing my infrastructure process</option>
-                        <option value="challenge5">Building a team of experts</option>
-                        <option value="challenge6">Other</option>
-                    </select>
+                        <select ref={challengeRef} defaultValue="" className="mt-5 text-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva bg-transparent col-span-2" required>
+                            <option value="" disabled className="text-speck-light-siva">What challenge are you trying to solve?</option>
+                            <option value="challenge1" className="hover:text-speck-red">Creating a new digital product</option>
+                            <option value="challenge2" className="hover:text-speck-red">Scaling my business</option>
+                            <option value="challenge3" className="hover:text-speck-red">Stepping into digital transformation</option>
+                            <option value="challenge4" className="hover:text-speck-red">Auditing and optimizing my infrastructure process</option>
+                            <option value="challenge5" className="hover:text-speck-red">Building a team of experts</option>
+                            <option value="challenge6" className="hover:text-speck-red">Other</option>
+                        </select>
 
-                    <div className="mt-5 col-span-2">
-                        <span>What is your budget?</span><br />
-                        <div className="flex justify-between">
-                            <button type="button" style={{border: '1px solid gray', borderRadius: '50px', backgroundColor: selectedBudget ==='upto50k' ? 'red' : "transparent", color: selectedBudget === 'upto50k' ? 'white' : 'black', width: '50%', padding: '5px', marginRight: '10px'}} onClick={() => setSelectedBudget('upto50k')}>Up to 50.000 eur</button>
-                            <button type="button" style={{border: '1px solid gray', borderRadius: '50px', backgroundColor: selectedBudget ==='50k-100k' ? 'red' : "transparent",  color: selectedBudget === '50k-100k' ? 'white' : 'black', width: '50%', padding: '5px', marginRight: '10px'}} onClick={() => setSelectedBudget('50k-100k')}>50.000 eur - 100.000 eur</button>
-                            <button type="button" style={{border: '1px solid gray', borderRadius: '50px', backgroundColor: selectedBudget ==='100k-250k' ? 'red' : "transparent",  color: selectedBudget === '100k-250k' ? 'white' : 'black', width: '50%', padding: '5px', marginRight: '10px'}} onClick={() => setSelectedBudget('100k-250k')}>100.000 eur - 250.000 eur</button>
-                            <button type="button" style={{border: '1px solid gray', borderRadius: '50px', backgroundColor: selectedBudget ==='over250k' ? 'red' : "transparent", color: selectedBudget === 'over250k' ? 'white' : 'black', width: '50%', padding: '5px', marginRight: '10px'}} onClick={() => setSelectedBudget('over250k')}>Over 250.000 eur</button>
-                            <button type="button" style={{border: '1px solid gray', borderRadius: '50px', backgroundColor: selectedBudget ==='notsure' ? 'red' : "transparent", color: selectedBudget === 'notsure' ? 'white' : 'black', width: '50%', padding: '5px', marginRight: '10px'}} onClick={() => setSelectedBudget('notsure')}>Not sure yet</button>
-                        </div>
-                    </div>
-
-                    <textarea ref={scopeRef} placeholder="Tell us more about your scope*" className="col-span-2 w-100 mt-10 h-30" style={{borderBottom: '1px dotted black', background: 'transparent', resize: 'none'}} required />
-
-
-                    <div id="fileInput" className="mt-5 flex justify-center col-span-2 p-10 text-center" style={{border: '1px dotted gray', borderRadius: '20px'}} onClick={handleFileInputClick}>
-                        <label htmlFor="fileInput" className="flex align-center">
-                            <img alt="attachment icon" src="attachment icon.svg" width="23" height="25" className="mr-5" />
-                            <span style={{ color: '#CBD3D6' }}>Feel free to attach any additional documents!</span>
-                        </label>
-                        <input type="file" id="fileInput" ref={fileInput} style={{ display: 'none' }} onChange={handleFileChange} multiple/>
-                    </div>
-
-                    <div id="files" style={{gridColumn: 1}}>
-                        {files.length > 0 && <p className="text-lg text-black font-bold">Selected Files:</p>}   
-                        {files.map((file, index) => (
-                            <div key={index} className="ml-5">
-                                <span style={{ color: 'red', marginRight: '10px' }}>•</span>
-                                <p className="text-xs text-black font-semibold" style={{ display: 'inline' }}>
-                                    {file.name} - {Math.round(file.size / 1024)} KB
-                                </p>
-                                <button className="text-xs font-semibold" style={{marginLeft: 5, color: 'red'}} onClick={() => {
-                                    event?.preventDefault();
-                                    setFiles(prevFiles => prevFiles.filter((_, fileIndex) => fileIndex !== index));
-                                }}>x</button>
+                        <div className="mt-5 md:col-span-2">
+                            <span>What is your budget?*</span><br />
+                            <div className="flex flex-wrap md:w-full lg:justify-between items-center min-w-fit mt-3">
+                                <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full bg-${selectedBudget === 'upto50k' ? 'speck-red' : 'transparent'} text-${selectedBudget === 'upto50k' ? 'white' : 'black'} font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2`} onClick={() => setSelectedBudget('upto50k')}>Up to 50.000 eur</button>
+                                <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full bg-${selectedBudget === '50k-100k' ? 'speck-red' : 'transparent'} text-${selectedBudget === '50k-100k' ? 'white' : 'black'} font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2`} onClick={() => setSelectedBudget('50k-100k')}>50.000 eur - 100.000 eur</button>
+                                <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full bg-${selectedBudget === '100k-250k' ? 'speck-red' : 'transparent'} text-${selectedBudget === '100k-250k' ? 'white' : 'black'} font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2`} onClick={() => setSelectedBudget('100k-250k')}>100.000 eur - 250.000 eur</button>
+                                <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full bg-${selectedBudget === 'over250k' ? 'speck-red' : 'transparent'} text-${selectedBudget === 'over250k' ? 'white' : 'black'} font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2`} onClick={() => setSelectedBudget('over250k')}>Over 250.000 eur</button>
+                                <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full bg-${selectedBudget === 'notsure' ? 'speck-red' : 'transparent'} text-${selectedBudget === 'notsure' ? 'white' : 'black'} font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2`} onClick={() => setSelectedBudget('notsure')}>Not sure yet</button>
                             </div>
-                        ))}
-                    </div>
+                        </div>
 
-                    <div style={{gridColumn: '1 / span 2'}}>
-                        <div>
-                            <input ref={tos1Ref} type="checkbox" id="tos1" style={{borderRadius: '4px'}} required />
-                            <label htmlFor="tos1" className="ml-5" style={{fontSize: '12px'}}>Stay up to date with the latest software development and design trends brought to you by Speck experts</label>
+                        <textarea ref={scopeRef} placeholder="Tell us more about your scope*" className="col-span-2 placeholder-speck-ligt-siva w-100 mt-10 h-8 border-b-2 border-dotted border-speck-ligt-siva bg-transparent resize-none" required />
+
+
+                        <div id="fileInput" className="mt-5 flex justify-center col-span-2 p-10 text-center border-2 border-dotted border-speck-ligt-siva rounded-3xl" onClick={handleFileInputClick}>
+                            <label htmlFor="fileInput" className="flex align-center">
+                                <img alt="attachment icon" src="attachment icon.svg" width="23" height="25" className="mr-5" />
+                                <span style={{ color: '#CBD3D6' }}>Feel free to attach any additional documents!</span>
+                            </label>
+                            <input type="file" id="fileInput" ref={fileInput} className="hidden" onChange={handleFileChange} multiple/>
                         </div>
-                        <div>
-                            <input ref={tos2Ref} type="checkbox" id="tos2" style={{borderRadius: '4px'}} required />
-                            <label htmlFor="tos2" className="ml-5" style={{fontSize: '12px'}}>I agree to the Privacy Policy</label>
+
+                        <div id="files" className="col-start-1">
+                            {files.length > 0 && <p className="text-lg text-black font-bold">Selected Files:</p>}   
+                            {files.map((file, index) => (
+                                <div key={index} className="ml-5 flex items-center">
+                                    <span className="text-speck-red mr-3">•</span>
+                                    <p className="text-xs text-black font-semibold inline">
+                                        {file.name} - {Math.round(file.size / 1024)} KB
+                                    </p>
+                                    <button className="text-xs font-semibold ml-2 text-speck-red" onClick={() => {
+                                        event?.preventDefault();
+                                        setFiles(prevFiles => prevFiles.filter((_, fileIndex) => fileIndex !== index));
+                                    }}>x</button>
+                                </div>
+                            ))}
                         </div>
-                    </div>
-                    <br />
-                    <button style={{gridColumn: 1}} className="bg-red-500 text-white px-4 py-2 rounded-full w-2/5" type="submit">Send &rarr;</button>
-                </form>
+
+                        <div className="col-start-1 col-span-2">
+                            <div>
+                                <input ref={tos1Ref} type="checkbox" id="tos1" className="rounded-md" required />
+                                <label htmlFor="tos1" className="ml-5 text-sm">Stay up to date with the latest software development and design trends brought to you by Speck experts</label>
+                            </div>
+                            <div>
+                                <input ref={tos2Ref} type="checkbox" id="tos2" className="rounded-md" required />
+                                <label htmlFor="tos2" className="ml-5 text-sm">I agree to the <span className="text-speck-red">Privacy</span> Policy</label>
+                            </div>
+                        </div>
+                        <br />
+                        <button className="text-white bg-speck-red font-bold font-heywow rounded-full px-4 py-2 text-center items-center w-40 h-14 col-start-1" type="submit">Send &rarr;</button>
+                    </form>
+                </div>
             </div>
         </main>
     );

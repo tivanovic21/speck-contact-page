@@ -2,59 +2,55 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer style={{ backgroundColor: '#212129', paddingBottom: '100px'}}>
-            <div className='flex justify-between p-20 mx-4 pt-2'>
-                <div style={{ flex: 1, margin: '0 20px' }}>
-                    <h3 style={{ color: '#83838F', fontFamily: 'HeyWow', fontWeight: 100, fontSize: '15px'}}>OUR OFFICES</h3>
-                    <div>
-                        <div className='mt-5' style={{ display: 'flex', flexDirection: 'row'}}>
-                            <div style={{ marginRight: '20px', display: 'flex', flexDirection: 'column'}}>
-                                <h3 style={{ color: '#FFF', fontFamily: 'HeyWow', fontWeight: 100, fontSize:'24px'}}>Indiana</h3>
-                                <div style={{color: '#CBD3D6', fontFamily: 'Gabribaldi', marginTop: 10, fontSize: '16px'}}>
+        <footer className='bg-speck-footer-bg pb-24'>
+            <div className='grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1 gap-x-12 md:gap-x-8 p-20 pt-2'>
+                <div className='col-span-2 md:col-span-2 flex flex-col'>
+                        <h3 className=' text-speck-footer-label font-heywow text-base font-bold'>OUR OFFICES</h3>
+                        <div className='grid grid-cols-2 md:gap-x-0 gap-x-12 mt-2 flex-grow'>
+                            <div className='flex flex-col justify-between'>
+                                <h3 className='text-white font-heywow text-2xl font-bold'>Indiana</h3>
+                                <div className='text-speck-ligt-siva font-garibaldi font-light mt-3 text-base'>
                                     <p>55 Monument Circle</p>
                                     <p>Indianopolis 46204</p>
-                                    <p style={{marginTop: 20}}><a href="tel:+13175365585" style={{ textDecoration: 'underline' }}>+1 (317) 536-5585</a></p>
+                                    <p className='mt-auto underline'><a href="tel:+13175365585">+1 (317) 536-5585</a></p>
                                 </div>
                             </div>
-                            <div style={{display: 'flex', flexDirection: 'column'}}>
-                                <h3 style={{ color: '#FFF', fontFamily: 'HeyWow', fontWeight: 100, fontSize: '24px'}}>Croatia</h3>
-                                <div style={{color: '#CBD3D6', fontFamily: 'Gabribaldi', marginTop: 10, fontSize: '16px'}}>
+                            <div className='flex flex-col justify-between'>
+                                <h3 className='text-white font-heywow text-2xl font-bold'>Croatia</h3>
+                                <div className='text-speck-ligt-siva font-garibaldi font-light mt-3 text-base'>
                                     <p>Petračićeva 6</p>
                                     <p>10000 Zagreb</p>
-                                    <p style={{marginTop: 20}}><a href="tel:+385993587050" style={{ textDecoration: 'underline'}}>+385 99 3587 050</a></p>
+                                    <p className='mt-auto underline'><a href="tel:+385993587050">+385 99 3587 050</a></p>
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </div>
-                <div style={{ flex: 1, margin: '0 20px' }}>
-                    <h3 style={{ color: '#83838F', fontFamily: 'HeyWow', fontWeight: 100}}>CONTACT</h3>
-                    <div className='mt-5 h-10' >
-                        <div style={{ display: 'flex', flexDirection: 'row' }}>
-                            <div style={{ marginRight: '20px' }}>
-                                <a href="https://www.facebook.com"><img src="/facebook-app-logo 1.svg" alt="Facebook" /></a>
-                            </div>
-                            <div style={{ marginRight: '20px' }}>
-                                <a href="https://www.linkedin.com"><img src="/linkedin-logo 1.svg" alt="LinkedIn" /></a>
-                            </div>
-                            <div>
-                                <a href="https://www.instagram.com"><img src="/clutch_small_logo 1.svg" alt="Instagram" /></a>
-                            </div>
+                <div className='col-span-1 md:col-span-1 md:mt-0 mt-16 overflow-visible flex flex-col justify-between'>
+                    <h3 className='text-speck-footer-label font-heywow text-base font-bold'>CONTACT</h3>
+                    <div className='flex flex-row mt-4'>
+                        <div className='mr-5'>
+                            <a href="https://www.facebook.com"><img src="/facebook-app-logo 1.svg" alt="Facebook" /></a>
                         </div>
-                        <div style={{color: '#CBD3D6', fontFamily: 'Gabribaldi', display: 'flex', flexDirection: 'column', alignContent: 'center', marginTop: '53px'}}> 
-                            <a href='mailto:hello@speck.agency' style={{ textDecoration: 'underline', fontSize: '17px', marginBottom: '10px' }}>hello@speck.agency</a>
-                            <a href='mailto:career@speck.agency' style={{ textDecoration: 'underline', fontSize: '17px' }}>career@speck.agency</a>
+                        <div className='mr-5'>
+                            <a href="https://www.linkedin.com"><img src="/linkedin-logo 1.svg" alt="LinkedIn" /></a>
+                        </div>
+                        <div>
+                            <a href="https://www.instagram.com"><img src="/clutch_small_logo 1.svg" alt="Instagram" /></a>
                         </div>
                     </div>
-                </div>
-                <div style={{ flex: 1, margin: '0 20px' }}>
-                    <h3 style={{ color: '#83838F', fontFamily: 'HeyWow', fontWeight: 100}}>LEGAL</h3>
-                    <div className='mt-5 h-10' style={{ color: '#FFF', fontFamily: 'HeyWow', fontWeight: 10, fontSize: '15px'}}>    
-                        <p><a href="/">Privacy Policy</a></p>
-                        <p><a href="/">Company</a></p>
-                        <p><a href="/">EU Project</a></p>
-                        <p style={{color: '#CBD3D6', fontFamily: 'Gabribaldi', fontSize: '13px', marginTop: '50px'}}>&copy; 2024 Speck d.o.o.</p>
+                    <div className='text-speck-ligt-siva font-garibaldi font-light text-base mt-14'>
+                        <a href='mailto:hello@speck.agency' className='underline text-base mb-2'>hello@speck.agency</a><br/>
+                        <a href='mailto:career@speck.agency' className='underline text-base'>career@speck.agency</a>
                     </div>
+                </div>
+                <div className='col-span-1 md:col-span-1 md:mt-0 mt-16 flex flex-col justify-between'>
+                    <h3 className='text-speck-footer-label font-heywow text-base font-bold'>LEGAL</h3>
+                    <ul className='text-white font-heywow font-bold text-base'>
+                        <li><a href="/">Privacy Policy</a></li>
+                        <li><a href="/">Terms of Use</a></li>
+                        <li className='mb-10'><a href="/">EU Project</a></li>
+                        <p className=' text-speck-ligt-siva font-garibaldi font-light text-sm'>&copy; 2024 Speck d.o.o.</p>
+                    </ul>
                 </div>
             </div>
         </footer>

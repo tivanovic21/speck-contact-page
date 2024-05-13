@@ -6,12 +6,12 @@ import './globals.css';
 
 export default function Page() {
   return (
-    <div>
-      <NavBar /> {}
-      <main className="flex min-h-screen flex-col justify-between p-24">
+    <div className=' overflow-x-hidden'>
+      <NavBar />
+      <main className='min-w-fit'>
         <MainContent />
       </main>
-      <Footer /> {}
+      <Footer />
     </div>
   );
 }

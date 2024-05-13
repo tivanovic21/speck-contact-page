@@ -10,31 +10,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-@media only screen and (max-width: 600px) {
-  .form-container {
-    text-align: center;
-    margin: 0 auto;
-    max-width: 400px;
-  }
-
-  input,
-  select,
-  textarea,
-  button {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  h1 {
-    font-size: 36px;
-  }
-
-  .info-text {
-    font-size: 24px;
-  }
-}
-
-
 @media (prefers-color-scheme: light) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -55,12 +30,50 @@ body {
 
 @font-face {
   font-family: 'Heywow';
-  src: 
-    url('../../public/fonts/heywow/HeyWowBold.ttf') format('truetype'),
-    url('../../public/fonts/heywow/HeyWowBook.ttf') format('truetype'),
-    url('../../public/fonts/heywow/HeyWowLight.ttf') format('truetype'),
-    url('../../public/fonts/heywow/HeyWowMedium.ttf') format('truetype'),
-    url('../../public/fonts/heywow/HeyWowRegular.ttf') format('truetype'),
-    url('../../public/fonts/heywow/HeyWowSemiBold.ttf') format('truetype'),
-    url('../../public/fonts/heywow/HeyWowExtraBold.ttf') format('truetype');
+  src: url('../../public/fonts/heywow/HeyWowRegular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Heywow';
+  src: url('../../public/fonts/heywow/HeyWowLight.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Heywow';
+  src: url('../../public/fonts/heywow/HeyWowMedium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Heywow';
+  src: url('../../public/fonts/heywow/HeyWowSemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Heywow';
+  src: url('../../public/fonts/heywow/HeyWowBold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Heywow';
+  src: url('../../public/fonts/heywow/HeyWowExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Heywow';
+  src: url('../../public/fonts/heywow/HeyWowBook.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Garibaldi';
+  src: url('../../public/fonts/garibaldi-medium/Garibaldi-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
 }
