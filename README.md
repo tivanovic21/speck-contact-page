@@ -1,5 +1,6 @@
 # Speck - Contact Form
-This is a Frontend project done for [Speck](https://speck.agency/) created with NextJS, Resend API, React and Tailwind CSS. 
+
+This is a Frontend project done for [Speck](https://speck.agency/) created with NextJS, Resend API, React and Tailwind CSS.
 
 ## Getting Started
 
@@ -27,11 +28,11 @@ In the frontend, the project is using React library for components which make up
 
 ## Add Email sending functionality
 
-For this functionality to work you need to obtain an API key from [Resend](https://resend.com/) and create a .env.local file within the root of the project. 
-In the .env.local file you need to declare the resend API key like this: 
+For this functionality to work you need to obtain an API key from [Resend](https://resend.com/) and create a .env.local file within the root of the project.
+In the .env.local file you need to declare the resend API key like this:
 
 ```bash
 RESEND_API_KEY=key
 ```
 
-To use the functionality, restart the server. 
+To use the functionality, restart the server.
