@@ -1,8 +1,7 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
+This is a Frontend project done for [Speck](https://speck.agency/) created with NextJS, Resend API, React and Tailwind CSS. 
 ## Getting Started
 
-First, run the development server:
+To run development server follow the instructions:
 
 ```bash
 npm run dev
@@ -16,21 +15,10 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+(Email sending will not work due to the API key being private.)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## More about the project
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The goal of the project was to create a functional Contact Form based on the design provided in Figma.<br>
+In the backend, the project is using NextJS for API communication, and Resend API for sending emails which allows it to effortlessly send emails with attachments (not functional without API key).<br>
+In the frontend, the project is using React library for components which make up the design, aswell as Tailwind CSS for styling.
