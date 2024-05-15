@@ -90,17 +90,17 @@ const ContactForm = () => {
     };
 
     return (
-        <main className="p-24 min-h-screen">
+        <main className="md:p-24 p-10 min-h-screen">
             <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
             <div className={`flex flex-row flex-wrap ${windowWidth <= 1500 ? 'md:mb-44' : 'md:mb-16'}`}>
-                <div style={{fontSize: '180px', top: 100, left: 40, overflowWrap: 'anywhere', opacity: '0.03'}} className=" text-black font-heywow font-bold absolute pointer-events-none">
+                <div style={{opacity: '0.03', lineHeight: '1'}} className=" text-black md:text-10xl text-7xl md:inset-y-40 inset-y-32 md:inset-x-20 inset-x-5 font-heywow font-bold absolute pointer-events-none md:whitespace-nowrap overflow-hidden">
                     <p>Let's Collaborate</p>
                 </div>
                 <h1 className="text black font-heywow font-bold md:text-7xl text-5xl break-words pointer-events-none">
                     Let's Collaborate<span className="text-speck-red font-heywow font-bold md:text-7xl text-5xl pointer-events-none">.</span>
                 </h1> 
             </div>
-            <div className="flex justify-center items-center md:h-screen z-10">
+            <div className="flex justify-center items-center md:h-screen md:mt-0 mt-10 z-10">
                 <div className="font-poppins text-base font-normal">
                     <form className="grid gap-y-10 grid-cols-2 gap-x-10 w-full" ref={formRef} onSubmit={handleSubmit}>
                         <input ref={firstNameRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent" placeholder="First Name *" required />
