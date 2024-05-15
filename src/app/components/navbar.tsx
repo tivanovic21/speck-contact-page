@@ -31,11 +31,11 @@ const NavBar = () => {
               <a href="#" className="block py-2 px-3 md:p-0">Carreers</a>
             </li>
             <li>
-              <a href="#" className="block py-2 px-3 md:p-0">Blog</a>
+              <a href="/blog" className="block py-2 px-3 md:p-0">Blog</a>
             </li>
           </ul>
         </div>
-        <button type="button" className="text-white bg-speck-red font-bold font-heywow rounded-full px-4 py-2 text-center items-center w-40 h-14">Get In Touch</button>
+        <button type="button" className="text-white bg-speck-red font-bold font-heywow rounded-full px-4 py-2 text-center items-center w-40 h-14"><a href="/">Get In Touch</a></button>
         <button data-collapse-toggle="navbar-cta" type="button" className="inline-flex items-center w-10 h-10 justify-center text-black rounded-lg md:hidden" aria-controls="navbar-cta" aria-expanded="false">
           <span className="sr-only">Open main menu</span>
           <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">

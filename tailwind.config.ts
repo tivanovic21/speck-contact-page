@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        '10xl': '11.25rem',
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         'heywow': ['HeyWow', 'sans-serif'],

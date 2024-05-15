@@ -1,8 +1,8 @@
-"use client";
-import React, {useState, useRef, useEffect} from "react";
-import "./globals.css";
 
-const MainContent = () => {
+import React, {useState, useRef, useEffect} from "react";
+import "../styles/globals.css";
+
+const ContactForm = () => {
     const [windowWidth, setWindowWidth] = useState<number>(0);
 
     useEffect(() => {
@@ -184,4 +184,4 @@ const MainContent = () => {
     );
 };
 
-export default MainContent;
+export default ContactForm;

@@ -1,14 +1,9 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Poppins } from "next/font/google";
-import "./globals.css";
+// src/layout.tsx
 
-const inter = Inter({ subsets: ["latin"] });
+import { Inter } from 'next/font/google';
+import './styles/globals.css';
 
-export const metadata: Metadata = {
-  title: "Contact Us | Speck",
-  description: "Speck contact form - Toni Ivanović",
-};
+const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({
   children,
@@ -17,7 +12,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}
+      <body className={inter.className}>
+        {children}
       </body>
     </html>
   );
