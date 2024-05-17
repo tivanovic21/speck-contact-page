@@ -103,13 +103,13 @@ const ContactForm = () => {
             <div className="flex justify-center items-center md:h-screen md:mt-0 mt-10 z-10">
                 <div className="font-poppins text-base font-normal">
                     <form className="grid gap-y-10 grid-cols-2 gap-x-10 w-full" ref={formRef} onSubmit={handleSubmit}>
-                        <input ref={firstNameRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent" placeholder="First Name *" required />
-                        <input ref={lastNameRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent" placeholder="Last Name *" required />
-                        <input ref={emailRef} type="email" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent" placeholder="Email Address *" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
-                        <input ref={phoneNumberRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent" placeholder="Phone Number *" required />
-                        <input ref={companyRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent" placeholder="Company *" required />
+                        <input ref={firstNameRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent focus:outline-none" placeholder="First Name *" required />
+                        <input ref={lastNameRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent focus:outline-none" placeholder="Last Name *" required />
+                        <input ref={emailRef} type="email" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent focus:outline-none" placeholder="Email Address *" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+                        <input ref={phoneNumberRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent focus:outline-none" placeholder="Phone Number *" required />
+                        <input ref={companyRef} type="text" className="mt-5 placeholder-speck-ligt-siva border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent focus:outline-none" placeholder="Company *" required />
 
-                        <select ref={howDidYouHearAboutUsRef} defaultValue="" className={`${selectedBudget == null ? 'text-speck-ligt-siva' : 'text-black'} mt-5 border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent`} onChange={(event) => setSelectedBudget(event.target.value)} required>
+                        <select ref={howDidYouHearAboutUsRef} defaultValue="" className={`${selectedBudget == null ? 'text-speck-ligt-siva' : 'text-black'} mt-5 border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent focus:outline-none`} onChange={(event) => setSelectedBudget(event.target.value)} required>
                             <option value="" disabled className="text-speck-ligt-siva">How did you hear about us?</option>
                             <option value="option1" className="hover:text-speck-red">Social media (Facebook, Instagram, LinkedIn)</option>
                             <option value="option2" className="hover:text-speck-red">Word of mouth</option>
@@ -117,7 +117,7 @@ const ContactForm = () => {
                             <option value="option4" className="hover:text-speck-red">Other</option>
                         </select>
 
-                        <select ref={challengeRef} defaultValue="" className={`${selectedChallenge == null ? 'text-speck-ligt-siva' : 'text-black'} mt-5 border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent col-span-2`} onChange={(event) => setSelectedChallenge(event.target.value)} required>
+                        <select ref={challengeRef} defaultValue="" className={`${selectedChallenge == null ? 'text-speck-ligt-siva' : 'text-black'} mt-5 border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent col-span-2 focus:outline-none`} onChange={(event) => setSelectedChallenge(event.target.value)} required>
                             <option value="" disabled className="text-speck-light-siva">What challenge are you trying to solve?</option>
                             <option value="challenge1" className="hover:text-speck-red">Creating a new digital product</option>
                             <option value="challenge2" className="hover:text-speck-red">Scaling my business</option>
@@ -130,15 +130,15 @@ const ContactForm = () => {
                         <div className="mt-5 md:col-span-2">
                             <span>What is your budget?*</span><br />
                             <div className="flex flex-wrap md:w-full lg:justify-between items-center min-w-fit mt-3">
-                                <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full bg-${selectedBudget === 'upto50k' ? 'speck-red' : 'transparent'} text-${selectedBudget === 'upto50k' ? 'white' : 'black'} font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2`} onClick={() => setSelectedBudget('upto50k')}>Up to 50.000 eur</button>
-                                <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full bg-${selectedBudget === '50k-100k' ? 'speck-red' : 'transparent'} text-${selectedBudget === '50k-100k' ? 'white' : 'black'} font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2`} onClick={() => setSelectedBudget('50k-100k')}>50.000 eur - 100.000 eur</button>
-                                <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full bg-${selectedBudget === '100k-250k' ? 'speck-red' : 'transparent'} text-${selectedBudget === '100k-250k' ? 'white' : 'black'} font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2`} onClick={() => setSelectedBudget('100k-250k')}>100.000 eur - 250.000 eur</button>
-                                <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full bg-${selectedBudget === 'over250k' ? 'speck-red' : 'transparent'} text-${selectedBudget === 'over250k' ? 'white' : 'black'} font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2`} onClick={() => setSelectedBudget('over250k')}>Over 250.000 eur</button>
-                                <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full bg-${selectedBudget === 'notsure' ? 'speck-red' : 'transparent'} text-${selectedBudget === 'notsure' ? 'white' : 'black'} font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2`} onClick={() => setSelectedBudget('notsure')}>Not sure yet</button>
+                                <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full bg-${selectedBudget === 'upto50k' ? 'speck-red' : 'transparent'} text-${selectedBudget === 'upto50k' ? 'white' : 'black'} font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2 focus:outline-none px-4`} onClick={() => setSelectedBudget('upto50k')}>Up to 50.000 eur</button>
+                                <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full bg-${selectedBudget === '50k-100k' ? 'speck-red' : 'transparent'} text-${selectedBudget === '50k-100k' ? 'white' : 'black'} font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2 focus:outline-none px-4`} onClick={() => setSelectedBudget('50k-100k')}>50.000 eur - 100.000 eur</button>
+                                <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full bg-${selectedBudget === '100k-250k' ? 'speck-red' : 'transparent'} text-${selectedBudget === '100k-250k' ? 'white' : 'black'} font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2 focus:outline-none px-4`} onClick={() => setSelectedBudget('100k-250k')}>100.000 eur - 250.000 eur</button>
+                                <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full bg-${selectedBudget === 'over250k' ? 'speck-red' : 'transparent'} text-${selectedBudget === 'over250k' ? 'white' : 'black'} font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2 focus:outline-none px-4`} onClick={() => setSelectedBudget('over250k')}>Over 250.000 eur</button>
+                                <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full bg-${selectedBudget === 'notsure' ? 'speck-red' : 'transparent'} text-${selectedBudget === 'notsure' ? 'white' : 'black'} font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2 focus:outline-none px-4`} onClick={() => setSelectedBudget('notsure')}>Not sure yet</button>
                             </div>
                         </div>
 
-                        <textarea ref={scopeRef} placeholder="Tell us more about your scope*" className="col-span-2 placeholder-speck-ligt-siva w-100 mt-10 h-8 border-b-2 border-dotted border-speck-ligt-siva focus:border-black bg-transparent resize-none" required />
+                        <textarea ref={scopeRef} placeholder="Tell us more about your scope*" className="col-span-2 placeholder-speck-ligt-siva w-100 mt-10 h-8 border-b-2 border-dotted border-speck-ligt-siva focus:border-black focus:outline-none bg-transparent resize-none" required />
 
 
                         <div id="fileInput" className="mt-5 flex justify-center col-span-2 p-10 text-center border-2 border-dotted border-speck-ligt-siva rounded-3xl" onClick={handleFileInputClick}>
@@ -167,16 +167,16 @@ const ContactForm = () => {
 
                         <div className="col-start-1 col-span-2">
                             <div>
-                                <input ref={tos1Ref} type="checkbox" id="tos1" className="rounded-md" required />
+                                <input ref={tos1Ref} type="checkbox" id="tos1" className="rounded-md focus:outline-none" required />
                                 <label htmlFor="tos1" className="ml-5 text-sm">Stay up to date with the latest software development and design trends brought to you by Speck experts</label>
                             </div>
                             <div>
-                                <input ref={tos2Ref} type="checkbox" id="tos2" className="rounded-md" required />
+                                <input ref={tos2Ref} type="checkbox" id="tos2" className="rounded-md focus:outline-none" required />
                                 <label htmlFor="tos2" className="ml-5 text-sm">I agree to the <span className="text-speck-red">Privacy</span> Policy</label>
                             </div>
                         </div>
                         <br />
-                        <button className="text-white bg-speck-red font-bold font-heywow rounded-full px-4 py-2 text-center items-center w-40 h-14 col-start-1" type="submit">Send &rarr;</button>
+                        <button className="text-white bg-speck-red font-bold font-heywow rounded-full px-4 py-2 text-center items-center w-40 h-14 col-start-1 focus:outline-none" type="submit">Send &rarr;</button>
                     </form>
                 </div>
             </div>
