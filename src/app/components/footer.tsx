@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer className='bg-speck-footer-bg pb-24'>
-            <div className='grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1 gap-x-20 md:gap-x-8 p-20 pt-2'>
+            <div className='grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1 gap-x-20 md:gap-x-8 md:p-20 p-10 pt-2'>
                 <div className='col-span-2 md:col-span-2 flex flex-col'>
                         <h3 className=' text-speck-footer-label font-heywow text-base font-bold'>OUR OFFICES</h3>
                         <div className='grid grid-cols-2 md:gap-x-0 gap-x-12 mt-2 flex-grow'>
