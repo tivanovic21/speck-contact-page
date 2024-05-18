@@ -19,13 +19,13 @@ const Blog = () => {
             <div className="md:mt-20 mt-10 items-center">
                 <div className="overflow-x-auto mt-3">
                     <div className="flex flex-row md:w-full items-center min-w-fit md:gap-0 gap-2">
-                        <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2`}>ALL</button>
-                        <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2`}>INSIGHTS</button>
-                        <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2`}>AI</button>
-                        <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2`}>DIGITAL TRANSFORMATION</button>
-                        <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2`}>PRODUCT DEVELOPMENT</button>
-                        <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2`}>DESIGN</button>
-                        <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2`}>CULTURE</button>
+                        <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 px-2 md:mr-2 mb-2`}>ALL</button>
+                        <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 px-2 md:mr-2 mb-2`}>INSIGHTS</button>
+                        <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 px-2 md:mr-2 mb-2`}>AI</button>
+                        <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 px-2 md:mr-2 mb-2`}>DIGITAL TRANSFORMATION</button>
+                        <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 px-2 md:mr-2 mb-2`}>PRODUCT DEVELOPMENT</button>
+                        <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 px-2 md:mr-2 mb-2`}>DESIGN</button>
+                        <button type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 px-2 md:mr-2 mb-2`}>CULTURE</button>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@ const Blog = () => {
 
                 <div className="flex flex-col md:ml-10 md:h-96 md:w-1/2 h-auto justify-around">
                     <div className="flex flex-row items-center md:mt-0 mt-5">
-                        <button id="main-cat" type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 md:mr-2 mb-2`}>AI</button>
+                        <button id="main-cat" type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:min-w-1/6 w-max h-auto p-1 px-2 md:mr-2 mb-2`}>AI</button>
                         <p id="main-read" className="md:text-base text-sm font-poppins font-bold ml-3 md:ml-0">8 min read</p>
                     </div>
                     <h1 id="main-title" className="md:text-5xl text-2xl font-heywow font-bold md:mt-0 mt-3 leading-normal">Why you should think about implementing AI?</h1>
@@ -53,7 +53,7 @@ const Blog = () => {
                 <div id="blog1">
                     <img id="blog1" src="/blog-gray-placeholder.png" alt="blog1" className="md:h-60 md:w-96 h-56 w-auto"/>
                     <div className="flex flex-row items-center mt-5">
-                        <button id="blog1-cat" type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:w-1/6 w-max h-auto p-1 md:mr-2 mb-2`}>AI</button>
+                        <button id="blog1-cat" type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:w-1/6 w-max h-auto p-1 px-2 md:mr-2 mb-2`}>AI</button>
                         <p id="blog1-read" className="md:text-base text-sm font-poppins font-bold ml-3 md:ml-0">8 min read</p>
                     </div>
                     <div className="md:w-96 w-80">
@@ -69,7 +69,7 @@ const Blog = () => {
                 <div id="blog2">
                     <img id="blog2" src="/blog-gray-placeholder.png" alt="blog2" className="md:h-60 md:w-96 h-56 w-auto"/>
                     <div className="flex flex-row items-center mt-5">
-                        <button id="blog2-cat" type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:w-1/6 w-max h-auto p-1 md:mr-2 mb-2`}>AI</button>
+                        <button id="blog2-cat" type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:w-1/6 w-max h-auto p-1 px-2 md:mr-2 mb-2`}>AI</button>
                         <p id="blog2-read" className="md:text-base text-sm font-poppins font-bold ml-3 md:ml-0">8 min read</p>
                     </div>
                     <div className="md:w-96 w-80">
@@ -85,7 +85,7 @@ const Blog = () => {
                 <div id="blog3">
                     <img id="blog3" src="/blog-gray-placeholder.png" alt="blog3" className="md:h-60 md:w-96 h-56 w-auto"/>
                     <div className="flex flex-row items-center mt-5">
-                        <button id="blog3-cat" type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:w-1/6 w-max h-auto p-1 md:mr-2 mb-2`}>AI</button>
+                        <button id="blog3-cat" type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:w-1/6 w-max h-auto p-1 px-2 md:mr-2 mb-2`}>AI</button>
                         <p id="blog3-read" className="md:text-base text-sm font-poppins font-bold ml-3 md:ml-0">8 min read</p>
                     </div>
                     <div className="md:w-96 w-80">
@@ -110,7 +110,7 @@ const Blog = () => {
                     <div id="blog1-ins" className="md:w-1/3 md:mt-0 mt-5 flex flex-col items-start">
                     <img src="/blog-gray-placeholder.png" alt="blog1-ins" className="md:h-60 md:w-96 h-56 w-auto" />
                     <div className="flex flex-row items-center mt-5">
-                        <button id="blog1-ins" type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:w-10 w-max h-auto p-1 md:mr-2 mb-2`}>AI</button>
+                        <button id="blog1-ins" type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:w-10 w-max h-auto p-1 px-2 md:mr-2 mb-2`}>AI</button>
                         <p id="blog1-ins-read" className="md:text-base text-sm font-poppins font-bold ml-3 md:ml-0">8 min read</p>
                     </div>
                     <div className="md:w-96 w-80">
@@ -125,7 +125,7 @@ const Blog = () => {
                     <div id="blog2-ins" className="md:w-1/3 md:mt-0 mt-10 flex flex-col items-start">
                     <img src="/blog-gray-placeholder.png" alt="blog2-ins" className="md:h-60 md:w-96 h-56 w-auto" />
                     <div className="flex flex-row items-center mt-5">
-                        <button id="blog2-ins" type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:w-10 w-max h-auto p-1 md:mr-2 mb-2`}>AI</button>
+                        <button id="blog2-ins" type="button" className={` border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:w-10 w-max h-auto p-1 px-2 md:mr-2 mb-2`}>AI</button>
                         <p id="blog2-ins-read" className="md:text-base text-sm font-poppins font-bold ml-3 md:ml-0">8 min read</p>
                     </div>
                     <div className="md:w-96 w-80">
@@ -140,7 +140,7 @@ const Blog = () => {
                     <div id="blog3-ins" className="md:w-1/3 md:mt-0 mt-10 flex flex-col items-start">
                     <img src="/blog-gray-placeholder.png" alt="blog3" className="md:h-60 md:w-96 h-56 w-auto" />
                     <div className="flex flex-row items-center mt-5">
-                        <button id="blog3-ins" type="button" className="border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:w-10 w-max h-auto p-1 md:mr-2 mb-2">AI</button>
+                        <button id="blog3-ins" type="button" className="border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:w-10 w-max h-auto p-1 px-2 md:mr-2 mb-2">AI</button>
                         <p id="blog3-ins-read" className="md:text-base text-sm font-poppins font-bold ml-3 md:ml-0">8 min read</p>
                     </div>
                     <div className="md:w-96 w-80">
@@ -175,7 +175,7 @@ const Blog = () => {
                 <div id="blog1-ins" className="md:w-1/3 md:mt-0 mt-5 flex flex-col items-start">
                 <img src="/blog-gray-placeholder.png" alt="blog1-ins" className="md:h-60 md:w-96 h-56 w-auto" />
                 <div className="flex flex-row items-center mt-5">
-                    <button id="blog1-ins" type="button" className="border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:w-10 w-max h-auto p-1 md:mr-2 mb-2">AI</button>
+                    <button id="blog1-ins" type="button" className="border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:w-10 w-max h-auto p-1 px-2 md:mr-2 mb-2">AI</button>
                     <p id="blog1-ins-read" className="md:text-base text-sm font-poppins font-bold ml-3 md:ml-0">8 min read</p>
                 </div>
                 <div className="md:w-96 w-80">
@@ -190,7 +190,7 @@ const Blog = () => {
                 <div id="blog2-ins" className="md:w-1/3 md:mt-0 mt-10 flex flex-col items-start">
                 <img src="/blog-gray-placeholder.png" alt="blog2-ins" className="md:h-60 md:w-96 h-56 w-auto" />
                 <div className="flex flex-row items-center mt-5">
-                    <button id="blog2-ins" type="button" className="border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:w-10 w-max h-auto p-1 md:mr-2 mb-2">AI</button>
+                    <button id="blog2-ins" type="button" className="border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:w-10 w-max h-auto p-1 px-2 md:mr-2 mb-2">AI</button>
                     <p id="blog2-ins-read" className="md:text-base text-sm font-poppins font-bold ml-3 md:ml-0">8 min read</p>
                 </div>
                 <div className="md:w-96 w-80">
@@ -205,7 +205,7 @@ const Blog = () => {
                 <div id="blog3-ins" className="md:w-1/3 md:mt-0 mt-10 flex flex-col items-start">
                 <img src="/blog-gray-placeholder.png" alt="blog3-ins" className="md:h-60 md:w-96 h-56 w-auto" />
                 <div className="flex flex-row items-center mt-5">
-                    <button id="blog3-ins" type="button" className="border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:w-10 w-max h-auto p-1 md:mr-2 mb-2">AI</button>
+                    <button id="blog3-ins" type="button" className="border-speck-ligt-siva border-solid border-2 rounded-full font-heywow text-sm font-bold md:w-10 w-max h-auto p-1 px-2 md:mr-2 mb-2">AI</button>
                     <p id="blog3-ins-read" className="md:text-base text-sm font-poppins font-bold ml-3 md:ml-0">8 min read</p>
                 </div>
                 <div className="md:w-96 w-80">

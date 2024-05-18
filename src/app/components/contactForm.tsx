@@ -21,9 +21,15 @@ const ContactForm = () => {
     };
 
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        if(event.target.files && event.target.files.length > 0){
+        if(event.target.files) {
             const newFiles = Array.from(event.target.files);
-            setFiles(prevFiles => [...prevFiles, ...newFiles]);
+            const totalSize = newFiles.reduce((sum, file) => sum + file.size, 0) + files.reduce((sum, file) => sum + file.size, 0);
+
+            if (totalSize > 40 * 1024 * 1024) {
+                alert("Combined file size exceeds 40 MB. Please upload smaller files.");
+            } else {
+                setFiles(prevFiles => [...prevFiles, ...newFiles]);
+            }
         }
     };
 
