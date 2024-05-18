@@ -25,8 +25,8 @@ const ContactForm = () => {
             const newFiles = Array.from(event.target.files);
             const totalSize = newFiles.reduce((sum, file) => sum + file.size, 0) + files.reduce((sum, file) => sum + file.size, 0);
 
-            if (totalSize > 40 * 1024 * 1024) {
-                alert("Combined file size exceeds 40 MB. Please upload smaller files.");
+            if (totalSize > 10 * 1024 * 1024) {
+                alert("Combined file size exceeds 10 MB. Please upload smaller files.");
             } else {
                 setFiles(prevFiles => [...prevFiles, ...newFiles]);
             }
